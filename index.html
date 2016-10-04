@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <!--HTML Imports-->
+        <link rel="import" href="bower_components/polymer/polymer.html">
+        <link rel="import" href="bower_components/font-roboto/roboto.html">
+        <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+        <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+        <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+        <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+        <link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button.html">
+        <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+        <link rel="import" href="bower_components/paper-material/paper-material.html">
+        <link rel="import" href="bower_components/paper-styles/paper-styles.html">
+        <link rel="import" href="bower_components/paper-styles/color.html">
+        <link rel="import" href="bower_components/paper-styles/default-theme.html">
+        <link rel="import" href="bower_components/paper-card/paper-card.html">
+        <link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+        <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+        <link rel="import" href="bower_components/paper-button/paper-button.html">
+        <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+        <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
+        <link rel="import" href="bower_components/paper-input/paper-input.html">
+        <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+        <link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+        <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+        <link rel="import" href="bower_components/paper-badge/paper-badge.html">
+        <link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
+        <link rel="import" href="bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
+        <link rel="import" href="bower_components/app-route/app-location.html">
+        <link rel="import" href="bower_components/app-route/app-route.html">
+        <link rel="import" href="bower_components/neon-elements/neon-elements.html">
+        <link rel="import" href="my-card.html">
+        <link rel="import" href="element-name.html">
+        <link rel="stylesheet" href="styles/custom_styles.css">
+        <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+        <script type="text/javascript" src="bower_components/web-animations-js/web-animations.min.js"></script>
+    </head>
+    <body class="fullbleed layout vertical">
+        
+        <paper-header-panel mode="waterfall-tall" class="container">
+            <paper-toolbar>
+                <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                <span class="title">Material Design </span>
+                <paper-toggle-button noink class="white"></paper-toggle-button>
+                <paper-icon-button id="refresh" icon="refresh"></paper-icon-button>
+                <paper-icon-button id="add" icon="add" paper-drawer-toggle>+</paper-icon-button> 
+                <paper-badge for="refresh" label="4"></paper-badge>              
+                
+                <paper-toast id="toast0" class="fit-bottom" text="This toast auto-closes after 3 seconds"></paper-toast>
+                <paper-fab mini icon="favorite" title="heart" onclick="toast0.open()"></paper-fab>
+            </paper-toolbar>
+            <paper-toolbar>
+                <paper-tabs selected="0">
+                    <paper-tab>Paper Elements</paper-tab>
+                    <paper-tab>ITEM TWO</paper-tab>
+                    <paper-tab>ITEM THREE</paper-tab>
+                    <paper-tab>ITEM FOUR</paper-tab>
+                </paper-tabs>
+            </paper-toolbar>
+            <!--Custom element-->
+            <my-card></my-card>
+        </paper-header-panel>
+
+        <!--Iron elements-->
+        <paper-button raised onclick="toast0.open()"><iron-icon icon="favorite"></iron-icon>Toast</paper-button>
+        <element-name></element-name>
+    </body>
+    <script>
+
+    </script>
+</html>

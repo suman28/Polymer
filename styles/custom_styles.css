@@ -1,0 +1,85 @@
+
+body{
+    background-color:#eeeeee;
+    font-family: 'Roboto', 'Noto', sans-serif;
+}
+paper-header-panel {
+    --paper-header-panel-shadow: {
+        height: 6px;
+        bottom: -6px;
+        box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+    };
+}
+paper-material{
+    width:70px;
+    height:50px;
+ }
+.my-paper-material{
+    display:inline-block;
+    text-align:center;
+    vertical-align:middle;
+}
+paper-toolbar.red {
+    --paper-toolbar-background: red;
+    --paper-toolbar-title: {
+    font-style: italic;
+    font-weight: bold;
+    };
+}
+paper-toggle-button.green {
+    --paper-toggle-button-checked-bar-color:  var(--paper-green-500);
+    --paper-toggle-button-checked-button-color:  var(--paper-green-500);
+    --paper-toggle-button-checked-ink-color: var(--paper-green-500);
+    --paper-toggle-button-unchecked-bar-color:  var(--paper-teal-500);
+    --paper-toggle-button-unchecked-button-color:  var(--paper-teal-500);
+    --paper-toggle-button-unchecked-ink-color: var(--paper-teal-500);
+}
+#notes {
+    @apply(--layout-vertical);
+    @apply(--layout-wrap);
+    height: 344px;
+    width: 384px;
+}
+
+#notes > paper-card {
+    box-sizing: border-box;
+    max-width: 184px;
+    margin: 4px;
+    flex: 0 0 auto;
+}
+paper-button.custom {
+    --paper-button-ink-color: var(--paper-pink-a200);
+    /* These could also be individually defined for each of the
+    specific css classes, but we'll just do it once as an example */
+    --paper-button-flat-keyboard-focus: {
+    background-color: var(--paper-pink-a200);
+    color: white !important;
+    };
+    --paper-button-raised-keyboard-focus: {
+    background-color: var(--paper-pink-a200) !important;
+    color: white !important;
+    };
+}
+paper-button.custom:hover {
+    background-color: var(--paper-indigo-100);
+}
+paper-button.pink {
+    color: var(--paper-pink-a200);
+
+}
+paper-button.indigo {
+    background-color: var(--paper-indigo-500);
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+    background-color: var(--paper-pink-a200) !important;
+    color: white !important;
+    };
+}
+paper-button.indigo {
+    background-color: var(--paper-indigo-500);
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+    background-color: var(--paper-pink-a200) !important;
+    color: white !important;
+    };
+}

@@ -1,0 +1,6 @@
+{
+"directory":"bower_components",
+"proxy":"http://http-proxy.corporate.gtm.ge.com:80/",
+"https-proxy":"http://http-proxy.corporate.gtm.ge.com:80/",
+"strict-ssl": false
+}
