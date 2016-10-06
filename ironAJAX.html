@@ -1,0 +1,25 @@
+<link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+<dom-module id="ajax-test">
+	<template>
+	 	<iron-ajax
+            auto
+            url="https://www.googleapis.com/youtube/v3/search"
+            params='{"part":"snippet", "q":"polymer", "key": "AIzaSyCAi6OLGMm7v5zWHRN124rDTD61xDphXxk", "type": "video"}'
+            handle-as="json"
+            on-response="handleResponse"
+            debounce-duration="300"></iron-ajax>
+            <div id="response-text"></div>
+	</template>
+	<script>
+		Polymer({
+			is:'ajax-test',
+			ready: function() {
+			    this.textContent = 'Hello World, I am a Custom Element!';
+			  }
+			handleResponse: function(response){
+				Polymer.dom(this.root).querySelector('#response-text').innerHTML = response;
+				console.log(response);
+			}
+		});
+	</script>
+</dom-module>

@@ -1,0 +1,29 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<dom-module id="prop-test">
+	<template>
+		<div id="test-prop"></div>
+	</template>
+	<script type="text/javascript">
+		Polymer({
+			is: 'prop-test',
+
+			properties: {
+		      user: String,
+		      manager: {
+		        type: Boolean,
+		        notify: true,
+		        value:false
+		      }
+		    
+		    },
+		    attached: function() {
+		      // render
+		      this.textContent = 'Hello World, my user is ' + (this.user || 'nobody') + '.\n' +
+		        'This user is ' + (this.manager ? '' : 'not') + ' a manager.'+'mode is: ';
+		    }
+		});
+	</script>
+
+	<prop-test user="Suman" manager></prop-test>
+</dom-module>

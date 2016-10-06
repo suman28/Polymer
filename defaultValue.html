@@ -1,0 +1,30 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<dom-module id="default-test">
+	<template>
+		<div id="test-default">Suman in template tag {{userName}}</div>
+		<input type="text" value="{{value::change}}">{{name}}
+	</template>
+	<script type="text/javascript">
+		Polymer({
+			is: 'default-test',
+
+			properties: {
+				userName:String,
+				data:{
+					type: Object,
+					notify: true,
+					value: function(){
+						return { "title": "Persuasion", "author": "xyz" };
+					}
+				}
+			},
+			attached: function(){
+				this.textContent = this.userName + " "+ JSON.stringify(this.data);
+			}
+			
+		});
+	</script>
+
+	<default-test user-name="Suman"> </default-test>
+</dom-module>

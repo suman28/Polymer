@@ -25,12 +25,15 @@
         <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
         <link rel="import" href="bower_components/paper-badge/paper-badge.html">
         <link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
+        <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
         <link rel="import" href="bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
         <link rel="import" href="bower_components/app-route/app-location.html">
         <link rel="import" href="bower_components/app-route/app-route.html">
         <link rel="import" href="bower_components/neon-elements/neon-elements.html">
+        <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
         <link rel="import" href="my-card.html">
         <link rel="import" href="element-name.html">
+        <link rel="import" href="ironAJAX.html">
         <link rel="stylesheet" href="styles/custom_styles.css">
         <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
         <script type="text/javascript" src="bower_components/web-animations-js/web-animations.min.js"></script>
@@ -57,13 +60,18 @@
                     <paper-tab>ITEM FOUR</paper-tab>
                 </paper-tabs>
             </paper-toolbar>
+            
             <!--Custom element-->
             <my-card></my-card>
+           <paper-button raised onclick="toast0.open()"><iron-icon icon="favorite"></iron-icon>Toast</paper-button>
+           <paper-checkbox class="red">label
+            </paper-checkbox>
+        <!-- <element-name></element-name> -->
         </paper-header-panel>
-
+        
         <!--Iron elements-->
-        <paper-button raised onclick="toast0.open()"><iron-icon icon="favorite"></iron-icon>Toast</paper-button>
-        <element-name></element-name>
+        <ajax-test></ajax-test>
+        
     </body>
     <script>
 
